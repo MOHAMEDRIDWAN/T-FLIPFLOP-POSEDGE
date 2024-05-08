@@ -47,14 +47,12 @@ From the above characteristic table, we can directly write the next state equati
 Developed by: MOHAMED RIDWAN A
 RegisterNumber: 212223110030
 
-module TFLIPFLOPPOSEDGE( input clk, rst_n, input t,
+module tflipflop( input clk, rst_n, input t,
 output reg q,
 output q_bar
 );
 always@(posedge clk) 
-begin // for synchronous reset
-  //WRITE THE CONDITION OF TOGGLE FLIPFLOP HERE WITH RESET AND 
-  //IMPLEMENT THE T LOGIC BY CONDITIONAL OPERATOR
+begin 
 if(!rst_n)
 q<=0;
 else 
